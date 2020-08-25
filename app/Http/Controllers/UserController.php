@@ -60,7 +60,7 @@ class UserController extends Controller
         return $userRepo->updateUser($request->all());
     }
 
-    public function delete($id){
+    public function destroy($id){
         $user = $this->userRepo->findUserById($id);
         $userRepo = new UserRepository($user);
         return $userRepo->deleteUser();
